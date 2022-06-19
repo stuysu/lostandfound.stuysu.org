@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% from "navbar.html" import nav_bar with context %}
 <html>
 
 <head>
@@ -11,44 +12,7 @@
 </head>
 
 <body>
-
-    <!--Navigation Bar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link text-light ms-5"
-                        href="http://homer.stuy.edu/~tacuna20/stuylostandfound/templates/home.html">Home</a></li>
-                <li class="nav-item active"><a class="nav-link text-light ms-5"
-                        href="http://homer.stuy.edu/~tacuna20/stuylostandfound/templates/outwears/outerwear.html"><i
-                            class="fa-solid fa-shirt"></i>
-                        Outerwear</a></li>
-                <li class="nav-item active"><a class="nav-link text-light ms-5"
-                        href="http://homer.stuy.edu/~tacuna20/stuylostandfound/templates/gloveshatsscarves.html"><i
-                            class="fa-solid fa-mitten"></i> Gloves, Hats, and
-                        Scarves</a></li>
-                <li class="nav-item active"><a class="nav-link text-light ms-5"
-                        href="http://homer.stuy.edu/~tacuna20/stuylostandfound/templates/personalschoolsupplies.html"><i
-                            class="fa-solid fa-clipboard"></i> Personal School
-                        Supplies</a></li>
-                <li class="nav-item active"><a class="nav-link text-light ms-5"
-                        href="http://homer.stuy.edu/~tacuna20/stuylostandfound/templates/bookspapers.html"><i
-                            class="fa-solid fa-book"></i> Books, Textbooks,
-                        and
-                        Papers</a></li>
-                <li class="nav-item active"><a class="nav-link text-light ms-5"
-                        href="http://homer.stuy.edu/~tacuna20/stuylostandfound/templates/smallitems.html"><i
-                            class="fa-solid fa-id-card"></i> Small Items (Room
-                        209)</a>
-                </li>
-
-                </form>
-        </div>
-    </nav>
+	{{nav_bar()}}
 
     <div class="container mb-3 mt-4 mb-4">
         <h2 class="fw-light">Credits</h2>
@@ -60,7 +24,9 @@
             This website would not look nearly as good as it does without the help of Noakai Aronesty, who wrote much of
             the front-end code using bootstrap to design the theming of the website. The website would also not work
             nearly as well as it does without the help of Tomás Acuña, who wrote the backend code to allow the catalogue
-            to be updated in real-time.
+            to be updated in real-time.<br>
+			Currently, the code has been modified by Chun Yeung Wong to run on the servers and the backend databases of the Stuyvesant Student Union, where it is currently being hosted at.<br>
+			The source code is accessible on <a href="https://github.com/frank-cywong/stuylostandfound/" target="_blank" rel="noreferrer noopener">Github</a>.
             <br><br>Thank you for using the website!
         </p>
     </div>

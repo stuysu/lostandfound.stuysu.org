@@ -14,6 +14,12 @@ def home():
         "home.html",
     )
 
+@app.route("/credits", methods=["GET","POST"])
+def credits():
+    return render_template(
+        "credits.html",
+    )
+
 @app.route("/databaseupload", methods=["GET","POST"])
 def hello():
     return render_template(
