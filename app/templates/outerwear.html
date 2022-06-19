@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+{% from "navbar.html" import nav_bar with context %}
+<html>
+
+<head>
+    <title>Lost and Found Outerwear</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://kit.fontawesome.com/9e485ac24b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	{{nav_bar()}}
+
+    <div class="container mb-3 mt-4 mb-4">
+        <h2 class="fw-light">Outerwear</h2>
+    </div>
+
+    <h3 class="text-danger fw-light text-center">Test Outerwear Database Lost Item Table (WIP)</h3>
+
+    <div class=main>
+    <p>
+        <table style="width:100%;font-family:Trebuchet MS;">
+            <thead>
+                <tr style="background-color:#f0f0f0">>
+                    <td>Date Catalogued</td>
+                    <td>Description</td>
+                    <td>Images</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in outerwear %} 
+                    <tr>
+                        <td>
+                            <img width="100px" src="data:image/png;base64, {{ i[2] }}" />
+                            {% if i[3] %}
+                                <img width="100px" src="data:image/png;base64, {{ i[3] }}" />
+                            {% endif %}
+                        </td>
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </p>
+    </div>
+
+    <!-- Catalogue -->
+    <h3 class="text-danger fw-light text-center">Lost Items (5/19/22)</h3>
+
+    <!-- Catalogue Table -->
+    <div class=main>
+        <p>
+        <table style="width:100%;font-family:Trebuchet MS;">
+            <tr style="background-color:#f0f0f0">
+                <th>Image</th>
+                <th>Date Catalogued</th>
+                <th>Description</th>
+                <th>Object Store Page</th>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear2a.jpg" width="150" height="200" alt="outerwear2a">
+                    <img src="../static/permanentimages/outerwear2b.jpg" width="150" height="200" alt="outerwear2b">
+                </td>
+                <td>3/7/22</td>
+                <td>Black puffer jacket, Uniqlo</td>
+                <td><a class="uHover" href="https://www.uniqlo.com/us/en/men-ultra-light-down-parka-443320.html">Men
+                        Ultra Light Down Parka (09 Black)</a></td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear3a.jpg" width="150" height="200" alt="outerwear3a">
+                    <img src="../static/permanentimages/outerwear3b.jpg" width="150" height="200" alt="outerwear3b">
+                </td>
+                <td>3/7/22</td>
+                <td>Light gray fleece, Old Navy</td>
+                <td><a class="uHover"
+                        href="https://oldnavy.gap.com/browse/product.do?pid=645935#pdp-page-content">Dynamic Fleece
+                        Full-Zip Hoodie for Men</a></td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear4a.jpg" width="150" height="200" alt="outerwear4a">
+                    <img src="../static/permanentimages/outerwear4b.jpg" width="150" height="200" alt="outerwear4b">
+                </td>
+                <td>3/7/22</td>
+                <td>1/4 Zip Black Faux Fur Hoodie, Moret</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear6a.jpg" width="150" height="200" alt="outerwear6a">
+                    <img src="../static/permanentimages/outerwear6b.jpg" width="150" height="200" alt="outerwear6b">
+                </td>
+                <td>3/7/22</td>
+                <td>Blue sweatpants in HRC plastic bag</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear7a.jpg" width="150" height="200" alt="outerwear7a">
+                    <img src="../static/permanentimages/outerwear7b.jpg" width="150" height="200" alt="outerwear7b">
+                </td>
+                <td>3/8/22</td>
+                <td>Black zippered hoodie</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear11a.jpg" width="150" height="200" alt="outerwear11a">
+                    <img src="../static/permanentimages/outerwear11b.jpg" width="150" height="200" alt="outerwear11b">
+                </td>
+                <td>3/10/22</td>
+                <td>Blue striped hoodie, Smog</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear12a.jpg" width="150" height="200" alt="outerwear12a">
+                    <img src="../static/permanentimages/outerwear12b.jpg" width="150" height="200" alt="outerwear12b">
+                </td>
+                <td>3/16/22</td>
+                <td>Dark blue puffer jacket, Uniqlo</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear13a.jpg" width="150" height="200" alt="outerwear13a">
+                    <img src="../static/permanentimages/outerwear13b.jpg" width="150" height="200" alt="outerwear13b">
+                </td>
+                <td>3/16/22</td>
+                <td>Light brown puffer jacket</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear15a.jpg" width="150" height="200" alt="outerwear15a">
+                    <img src="../static/permanentimages/outerwear15b.jpg" width="150" height="200" alt="outerwear15b">
+                </td>
+                <td>3/24/22</td>
+                <td>Black hoodless puffer jacket, Uniqlo</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear19.jpg" width="150" height="200" alt="outerwear19">
+                </td>
+                <td>3/28/22</td>
+                <td>Stuyvesant gym jogging pants</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear18a.jpg" width="150" height="200" alt="outerwear18a">
+                    <img src="../static/permanentimages/outerwear18b.jpg" width="150" height="200" alt="outerwear18b">
+                </td>
+                <td>3/28/22</td>
+                <td>Black hoodie, Stuyvesant merch</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear021a.jpg" width="150" height="200" alt="outerwear021a">
+                    <img src="../static/permanentimages/outerwear021b.jpg" width="150" height="200" alt="outerwear021b">
+                </td>
+                <td>4/5/22</td>
+                <td>Black puffer jacket, Calvin Klein</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear025a.jpg" width="150" height="200" alt="outerwear025a">
+                    <img src="../static/permanentimages/outerwear025b.jpg" width="150" height="200" alt="outerwear025b">
+                </td>
+                <td>4/11/22</td>
+                <td>Black puffer jacket with yellow interior</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear028a.jpg" width="150" height="200" alt="outerwear028a">
+                    <img src="../static/permanentimages/outerwear028b.jpg" width="150" height="200" alt="outerwear028b">
+                </td>
+                <td>5/5/22</td>
+                <td>Black hoodie, French Toast</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear032a.jpg" width="150" height="200" alt="outerwear032a">
+                    <img src="../static/permanentimages/outerwear032b.jpg" width="150" height="200" alt="outerwear032b">
+                </td>
+                <td>5/6/22</td>
+                <td>Dark blue zippered hoodie with words "New York" on one sleeve
+                </td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear033a.jpg" width="150" height="200" alt="outerwear033a">
+                    <img src="../static/permanentimages/outerwear033b.jpg" width="150" height="200" alt="outerwear033b">
+                </td>
+                <td>5/6/22</td>
+                <td>Dark gray hoodless jacket, Columbia</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear034a.jpg" width="150" height="200" alt="outerwear034a">
+                    <img src="../static/permanentimages/outerwear034b.jpg" width="150" height="200" alt="outerwear034b">
+                </td>
+                <td>5/9/22</td>
+                <td>Dark gray hoodie, Champion</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear036a.jpg" width="150" height="200" alt="outerwear036a">
+                </td>
+                <td>5/9/22</td>
+                <td>SING Hoodie</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear037a.jpg" width="150" height="200" alt="outerwear037a">
+                    <img src="../static/permanentimages/outerwear037b.jpg" width="150" height="200" alt="outerwear037b">
+                </td>
+                <td>5/9/22</td>
+                <td>Dark blue Stuyvesant hoodie</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear038a.jpg" width="150" height="200" alt="outerwear038a">
+                    <img src="../static/permanentimages/outerwear038b.jpg" width="150" height="200" alt="outerwear038b">
+                </td>
+                <td>5/9/22</td>
+                <td>Navy blue hoodie</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear040a.jpg" width="150" height="200" alt="outerwear040a">
+                    <img src="../static/permanentimages/outerwear040b.jpg" width="150" height="200" alt="outerwear040b">
+                </td>
+                <td>5/9/22</td>
+                <td>Puffer jacket, Tommy Hilfiger</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear042a.jpg" width="150" height="200" alt="outerwear042a">
+                    <img src="../static/permanentimages/outerwear042b.jpg" width="150" height="200" alt="outerwear042b">
+                </td>
+                <td>5/9/22</td>
+                <td>Light gray hoodie, Champion</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear043a.jpg" width="150" height="200" alt="outerwear043a">
+                    <img src="../static/permanentimages/outerwear043b.jpg" width="150" height="200" alt="outerwear043b">
+                </td>
+                <td>5/9/22</td>
+                <td>Dark blue sweatshirt, Champion</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear045a.jpg" width="150" height="200" alt="outerwear045a">
+                    <img src="../static/permanentimages/outerwear045b.jpg" width="150" height="200" alt="outerwear045b">
+                </td>
+                <td>5/9/22</td>
+                <td>Light gray hoodie, Adidas</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear046a.jpg" width="150" height="200" alt="outerwear046a">
+                </td>
+                <td>5/9/22</td>
+                <td>Black hoodie with blue stars, word "Metropolis"</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear047a.jpg" width="150" height="200" alt="outerwear047a">
+                    <img src="../static/permanentimages/outerwear047b.jpg" width="150" height="200" alt="outerwear047b">
+                </td>
+                <td>5/19/22</td>
+                <td>Black hoodless jacket, Primark Cares</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear048a.jpg" width="150" height="200" alt="outerwear048a">
+                    <img src="../static/permanentimages/outerwear048b.jpg" width="150" height="200" alt="outerwear048b">
+                </td>
+                <td>5/19/22</td>
+                <td>Black hoodie, Everlast Sport</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear049a.jpg" width="150" height="200" alt="outerwear049a">
+                    <img src="../static/permanentimages/outerwear049b.jpg" width="150" height="200" alt="outerwear049b">
+                </td>
+                <td>5/19/22</td>
+                <td>Dark blue jacket, Sport-Tek</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear050a.jpg" width="150" height="200" alt="outerwear050a">
+                    <img src="../static/permanentimages/outerwear050b.jpg" width="150" height="200" alt="outerwear050b">
+                </td>
+                <td>5/19/22</td>
+                <td>Black hoodie, Morot Ultra</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear051a.jpg" width="150" height="200" alt="outerwear050a">
+                </td>
+                <td>5/19/22</td>
+                <td>Black pants, EboKepft</td>
+                <td>TBD</td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    <br><br><br>
+
+    <!-- Found Items -->
+    <h3 class="text-danger fw-light text-center">Found Items</h3>
+
+    <!-- Found Items Table -->
+    <div class=main>
+        <p>
+        <table style="width:100%;font-family:Trebuchet MS;">
+            <tr style="background-color:#f0f0f0">
+                <th>Image</th>
+                <th>Date Catalogued</th>
+                <th>Description</th>
+                <th>Object Store Page</th>
+            </tr>
+            <tr>
+                <td><br><img src="../static/permanentimages/outerwear5a.jpg" width="150" height="200" alt="outerwear5a">
+                    <img src="../static/permanentimages/outerwear5b.jpg" width="150" height="200" alt="outerwear5b">
+                </td>
+                <td>3/7/22</td>
+                <td>White hoodie with design</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear8a.jpg" width="150" height="200" alt="outerwear8a">
+                    <img src="../static/permanentimages/outerwear8b.jpg" width="150" height="200" alt="outerwear8b">
+                </td>
+                <td>3/8/22</td>
+                <td>Purple hoodie, Try Guys</td>
+                <td><a class="uHover" href="https://poshmark.com/listing/Try-Guys-hoodie-5cb36015afade855b41a309b">Try
+                        Guys Hoodie</a></td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear9.jpg" width="150" height="200" alt="outerwear9">
+                </td>
+                <td>3/8/22</td>
+                <td>Red plaid pajama pants, Stars Above</td>
+                <td><a class="uHover"
+                        href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwij2tX8_bf2AhUqTXIKHc6yCYcYABAJGgJxdQ&ohost=www.google.com&cid=CAESWuD29Iae_8s4mNzeoqvyjBWfofgwF2FBmzMwHZl6rQJ142TFi31N_9bhErCFdaxQVJzyOgSYvdlOJmuXCW_8WgrRm3h9LyKbzkZIcB6WwDIw7xmJY4kdc6ipSw&sig=AOD64_2k89CSEzAcdp0w8JRLrFVBppW2aA&ctype=5&q=&ved=2ahUKEwjWw8n8_bf2AhV6lYkEHflxDPQQ9aACegQIARBM&adurl=">Women's
+                        Perfectly Cozy Flannel Plaid Pajama Pants</a></td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear10.jpg" width="150" height="200" alt="outerwear10">
+                </td>
+                <td>3/8/22</td>
+                <td>Black leggings, Uniqlo</td>
+                <td><a class="uHover" href="https://www.uniqlo.com/us/en/women-heattech-leggings-444145.html">Uniqlo
+                        Women Heattech Leggings</a></td>
+            </tr>
+            <tr>
+                <td><br><img src="../static/permanentimages/outerwear1a.jpg" width="150" height="200" alt="outerwear1a">
+                    <img src="../static/permanentimages/outerwear1b.jpg" width="150" height="200" alt="outerwear1b">
+                </td>
+                <td>3/7/22</td>
+                <td>Dual-layer raincoat, Weatherproof</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear2a.jpg" width="150" height="200" alt="outerwear2a">
+                    <img src="../static/permanentimages/outerwear2b.jpg" width="150" height="200" alt="outerwear2b">
+                </td>
+                <td>3/7/22</td>
+                <td>Black puffer jacket, Uniqlo</td>
+                <td><a class="uHover" href="https://www.uniqlo.com/us/en/men-ultra-light-down-parka-443320.html">Men
+                        Ultra Light Down Parka (09 Black)</a></td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear17.jpg" width="150" height="200" alt="outerwear17">
+                </td>
+                <td>3/28/22</td>
+                <td>Friends t-shirt</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear16a.jpg" width="150" height="200" alt="outerwear16a">
+                    <img src="../static/permanentimages/outerwear16b.jpg" width="150" height="200" alt="outerwear16b">
+                </td>
+                <td>3/24/22</td>
+                <td>White hoodie, Uniqlo</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear020a.jpg" width="150" height="200" alt="outerwear020a">
+                    <img src="../static/permanentimages/outerwear020b.jpg" width="150" height="200" alt="outerwear020b">
+                </td>
+                <td>3/31/22</td>
+                <td>Black jacket, Ralph Lauren</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear024a.jpg" width="150" height="200" alt="outerwear024a">
+                    <img src="../static/permanentimages/outerwear024b.jpg" width="150" height="200" alt="outerwear024b">
+                </td>
+                <td>4/5/22</td>
+                <td>Black fleece</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear023a.jpg" width="150" height="200" alt="outerwear023a">
+                    <img src="../static/permanentimages/outerwear023b.jpg" width="150" height="200" alt="outerwear023b">
+                </td>
+                <td>4/5/22</td>
+                <td>Brown puffer jacket with fur hood</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear022a.jpg" width="150" height="200" alt="outerwear022a">
+                    <img src="../static/permanentimages/outerwear022b.jpg" width="150" height="200" alt="outerwear022b">
+                </td>
+                <td>4/5/22</td>
+                <td>Gray coat with brown hood</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear026a.jpg" width="150" height="200" alt="outerwear026a">
+                    <img src="../static/permanentimages/outerwear026b.jpg" width="150" height="200" alt="outerwear026b">
+                </td>
+                <td>5/5/22</td>
+                <td>Dark red cardigan, Urban Outfitters</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear027a.jpg" width="150" height="200" alt="outerwear027a">
+                </td>
+                <td>5/5/22</td>
+                <td>Gray long sleeve shirt</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear029a.jpg" width="150" height="200" alt="outerwear029a">
+                    <img src="../static/permanentimages/outerwear029b.jpg" width="150" height="200" alt="outerwear029b">
+                </td>
+                <td>5/6/22</td>
+                <td>Dark blue hoodie with college logo on back</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear030a.jpg" width="150" height="200" alt="outerwear030a">
+                    <img src="../static/permanentimages/outerwear030b.jpg" width="150" height="200" alt="outerwear030b">
+                </td>
+                <td>5/6/22</td>
+                <td>Light blue Stuyvesant hoodie</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear031a.jpg" width="150" height="200" alt="outerwear031a">
+                    <img src="../static/permanentimages/outerwear031b.jpg" width="150" height="200" alt="outerwear031b">
+                </td>
+                <td>5/6/22</td>
+                <td>Gray vest, Uniqlo</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear035a.jpg" width="150" height="200" alt="outerwear035a">
+                    <img src="../static/permanentimages/outerwear035b.jpg" width="150" height="200" alt="outerwear035b">
+                </td>
+                <td>5/9/22</td>
+                <td>Shiny black jacket, Save the Duck</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear039a.jpg" width="150" height="200" alt="outerwear039a">
+                    <img src="../static/permanentimages/outerwear039b.jpg" width="150" height="200" alt="outerwear039b">
+                </td>
+                <td>5/9/22</td>
+                <td>Red windbreaker, Protection System</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td><img src="../static/permanentimages/outerwear044a.jpg" width="150" height="200" alt="outerwear044a">
+                    <img src="../static/permanentimages/outerwear044b.jpg" width="150" height="200" alt="outerwear044b">
+                </td>
+                <td>5/9/22</td>
+                <td>Gray sweatshirt</td>
+                <td>TBD</td>
+            </tr>
+        </table>
+        </p>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+a {
+    text-decoration: none;
+}
+
+.uHover:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: Helvetica;
+}
+
+h2 {
+    font-family: Helvetica;
+}
+
+h3 {
+    font-family: Helvetica;
+}
+
+p {
+    font-family: "Trebuchet MS";
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.oLink {
+    color: #c98104;
+}
+
+.oLink:hover {
+    color: #e09e34;
+}
+
+
+.title {
+    background-color: rgba(241, 215, 66, 0.993);
+    color: white;
+    border-style: hidden;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.main {
+    background-color: #f0f0f0;
+    color: black;
+    border-style: hidden;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+li a {
+    display: block;
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #e44e4e94;
+    color: white;
+    border-radius: 4px;
+}
+
+.activated {
+    background-color: #b12939;
+    border-radius: 4px;
+}
+.carousel .carousel-item {
+    height: 400px;
+  }
+  
+.carousel-item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      min-height: 100px;
+      max-height: 400px;
+      max-width: auto;
+}
+
+.bg-epic {
+    background-color: #e7db68;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px #535353;
+}
+
+tr:nth-child(odd) {background-color:#b8b8b8}

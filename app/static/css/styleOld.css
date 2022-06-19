@@ -1,0 +1,68 @@
+h1 {font-family:Helvetica;}
+  		h2 {font-family:Helvetica;}
+  		h3 {font-family:Helvetica;}
+  		p {font-family:"Trebuchet MS";}
+		img {
+			max-width:100%;
+			height:auto;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+  		a {color: #c98104;}
+		a:hover{color:#e09e34;}
+		button{
+			background-color:#f5a37a;
+			border-style: solid;
+			border: 3px;
+  			border-radius: 3px;
+			padding: 10px;
+		}
+		button:hover{
+			background-color:#f08956;
+			border-style: hidden;
+  			border-radius: 3px;
+			padding: 10px;
+			padding: 10px
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-image: linear-gradient(rgba(199,36,28,1), rgba(199,36,28,0.7));
+        		border-style: hidden;
+  			border-radius: 5px;
+			padding: 5px;
+		}
+		li {
+			float: left;
+		}
+		li a {
+			display: block;
+			font-family:Helvetica;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		li a:hover {
+			background-color: #d6463e;
+			color: white;
+		}	
+  		.title {
+  			background-color: DarkRed;
+  			color: White;
+			border-style: hidden;
+  			border-radius: 5px;
+			padding: 15px;
+		}
+  		.main {
+  			background-color: #f0f0f0;
+  			color: black;
+        		border-style: hidden;
+  			border-radius: 5px;
+			padding: 5px;
+		}
+		.categories {
+			background-color: #bfbfbf;
+			border-style:solid;
+        }

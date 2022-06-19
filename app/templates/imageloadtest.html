@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lost and Found: The Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link text-light ms-5"
+                        href="homer.stuy.edu/~tacuna20/lost_and_found.html">Home</a></li>
+                <li class="nav-item active"><a class="nav-link text-light ms-5"
+                        href="http://homer.stuy.edu/~tacuna20/lost_and_found_zippered.html">Outerwear</a></li>
+                <li class="nav-item active"><a class="nav-link text-light ms-5"
+                        href="http://homer.stuy.edu/~tacuna20/lost_and_found_gloves_hats_scarves.html">Gloves, Hats, and
+                        Scarves</a></li>
+                <li class="nav-item active"><a class="nav-link text-light ms-5"
+                        href="http://homer.stuy.edu/~tacuna20/lost_and_found_gloves_hats_scarves.html">Personal School
+                        Supplies</a></li>
+                <li class="nav-item active"><a class="nav-link text-light ms-5"
+                        href="http://homer.stuy.edu/~tacuna20/lost_and_found_gloves_hats_scarves.html">Books, Textbooks,
+                        and
+                        Papers</a></li>
+                <li class="nav-item active"><a class="nav-link text-light ms-5"
+                        href="http://homer.stuy.edu/~tacuna20/lost_and_found_gloves_hats_scarves.html">Small Items (Room
+                        225)</a>
+                </li>
+
+                </form>
+        </div>
+    </nav>
+
+    <!-- Epik Title -->
+    <div class="container mb-3 mt-4 mb-4">
+        <h2 class="fw-light">Image Load Test</h2>
+    </div>
+
+    <div class="container mt-3">
+        <p>
+            Image: test-1.png
+        </p>
+        <img src="../images/test-1.png" width="200" height="300" alt="Example 1"> 
+        <p>
+            <br>Heheheha (it worked)
+            <br>So basically you can just put all the images into a designated image file and just load em directly from it
+            <br>Though having them taken from some database or smth is prolly much better (but for now this works ha)
+        </p>
+   </div> 
+
+   <h1>The input accept attribute</h1>
+
+<form action="/action_page.php">
+  <label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*" dirname="img.dir" formaction="../templates/imageloadtest.html">
+  <input type="submit" value="submit">
+</form>
+
+    </body>
+    </html>

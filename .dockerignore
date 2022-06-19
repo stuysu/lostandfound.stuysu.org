@@ -1,0 +1,3 @@
+# Permanent images for their large size
+/app/static/permanentimages/*
+**/.git

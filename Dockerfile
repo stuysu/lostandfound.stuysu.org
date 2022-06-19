@@ -1,0 +1,16 @@
+FROM library/python:3.10-alpine
+RUN apk update && apk upgrade && apk add --no-cache git
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY ./ /usr/src/app
+ARG DBUSER
+ARG DBPASSWORD
+ARG DBHOST
+ARG CLOUDINARY_URL
+ENV DBUSER=$DBUSER
+ENV DBPASSWORD=$DBPASSWORD
+ENV DBHOST=$DBHOST
+ENV CLOUDINARY_URL=$CLOUDINARY_URL
+RUN python3 -m pip install -r requirements.txt
+EXPOSE 5000
+CMD ["python3", "./app/__init__.py"]
