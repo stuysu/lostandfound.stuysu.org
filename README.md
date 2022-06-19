@@ -1,6 +1,8 @@
 # stuylostandfound
 Lost and Found: The Website V1.2
 
+Currently modified to be rehosted at [lostandfound.stuysu.org](https://lostandfound.stuysu.org)
+
 **MOBILE-FRIENDLY (ish)!!!!**
 <br>Finally made sidebar work such that mobile devices have a much easier time navigating
 <br>("Sidebar" is not really a sidebar but it is essentially a nav bar on mobile)
@@ -10,4 +12,3 @@ Only problem is that we could not find any server that could run the database fo
 
 Roadmap:
 - Add a search function
-
