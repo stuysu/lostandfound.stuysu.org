@@ -97,20 +97,7 @@ def submit():
             image = request.files[image_name].read()
             if not image:
                 images[index] = ""
-                #print("test")
                 continue
-            #Attempt to add a HEIC to JPEG converter
-            """fmt = whatimage.identify_image(image)
-            if fmt in ['heic', 'avif']:
-                i = pyheif.read_heif(image)
-                # Convert to other file format like jpeg
-                s = io.BytesIO()
-                image = Image.frombytes(
-                    mode=i.mode, size=i.size, data=i.data)
-
-                image.save(s, format="jpeg")
-                image = image.read()"""
-
             image_string = base64.b64encode(image)
             image_to_upload = image_string.decode('utf-8')
             images[index] = uploadImage("data:image/png;base64," + image_to_upload, user)
@@ -124,7 +111,6 @@ def delete():
     user = request.form.get("user")
     auth = request.form.get("auth")
     authorized = isAuthorized(user, auth)
-    #print("Authorized:" + str(authorized))
     if not authorized:
         return redirect(url_for('unauthorized'))
     database_delete(idnum)
