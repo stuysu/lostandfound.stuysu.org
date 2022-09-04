@@ -42,35 +42,35 @@ def boxinfo():
 def itsme():
     return render_template(
         "bookspapers.html", 
-        bookspapers=database_display_all('bookspapers')
+        data=database_display_all('bookspapers')
     )
 
 @app.route("/outerwear", methods=["GET","POST"])
 def iwaswondering():
     return render_template(
         "outerwear.html", 
-        outerwear=database_display_all('outerwear')
+        data=database_display_all('outerwear')
     )
 
 @app.route("/gloveshatsscarves", methods=["GET","POST"])
 def ifafteralltheseyears():
     return render_template(
         "gloveshatsscarves.html", 
-        gloves=database_display_all('gloveshatsscarves')
+        data=database_display_all('gloveshatsscarves')
     )
 
 @app.route("/personalschoolsupplies", methods=["GET","POST"])
 def youdliketomeet():
     return render_template(
         "personalschoolsupplies.html", 
-        personalschool=database_display_all('personalschoolsupplies')
+        data=database_display_all('personalschoolsupplies')
     )
 
 @app.route("/smallitems", methods=["GET","POST"])
 def togoovereverything():
     return render_template(
         "smallitems.html", 
-        smallitems=database_display_all('smallitems')
+        data=database_display_all('smallitems')
     )
 
 @app.route("/unauthorized", methods=["GET","POST"])

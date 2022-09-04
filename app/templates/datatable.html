@@ -1,0 +1,32 @@
+{% macro datatable(type) -%}
+<!--Data Table-->
+    <h3 class="text-danger fw-light text-center">Found {{type}}</h3>
+
+    <div class=main>
+    <p>
+        <table style="width:100%;font-family:Trebuchet MS;">
+            <thead>
+                <tr style="background-color:#f0f0f0">>
+                    <td>Date Catalogued</td>
+                    <td>Description</td>
+                    <td>Images</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %} 
+                    <tr>
+                        <td>
+                            <img width="100px" src="{{ i[2] }}" />
+                            {% if i[3] %}
+                                <img width="100px" src="{{ i[3] }}" />
+                            {% endif %}
+                        </td>
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </p>
+    </div>
+{% endmacro -%}

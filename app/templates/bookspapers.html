@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 {% from "navbar.html" import nav_bar with context %}
+{% from "datatable.html" import datatable with context %}
 <html>
 
 <head>
-    <title>Lost and Found: The Website</title>
+    <title>Lost and Found: Books, Textbooks, and Papers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -14,200 +15,12 @@
 <body>
 
 	{{nav_bar()}}
- 
-    <div class="container mb-3 mt-4 mb-4">
-        <h2 class="fw-light">Books, Textbooks, and Papers</h2>
-    </div>
+	<br>
+	{{datatable("Books, Textbooks, and Papers")}}
 
-    <!-- Catalogue -->
-    <h3 class="text-danger fw-light text-center">Lost Items (5/19/22)</h3>
-
-    <!-- Catalog Table -->
-    <div class=main>
-        <p>
-        <table style="width:100%;font-family:Trebuchet MS;">
-            <tr style="background-color:#f0f0f0">
-                <th>Image</th>
-                <th>Date Catalogued</th>
-                <th>Description</th>
-                <th>Object Store Page</th>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook1.jpg" width="150" height="200" alt="notebook1"></td>
-                <td>3/14/22</td>
-                <td>Black composition notebook, Staples</td>
-                <td><a class="uHover" href="https://www.ebay.com/itm/202938904368">Staples College Ruled Composition
-                        Notebook</a></td>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book4.jpg" width="150" height="200" alt="book4"></td>
-                <td>3/17/22</td>
-                <td>Tonal Music textbook, Harmonic Materials</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book5.jpg" width="150" height="200" alt="book5"></td>
-                <td>3/17/22</td>
-                <td>Chemistry textbook, Masterton & Hurley</td>
-                <td><a class="uHover"
-                        href="https://www.amazon.com/Physics-Physical-Setting-Prentice-Regents/dp/013361199X">Physics,
-                        The Physical Setting: Prentice Hall Review for New York Regents</a></td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book6.jpg" width="150" height="200" alt="book6"></td>
-                <td>3/17/22</td>
-                <td>Spanish 2 workbook</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book7.jpg" width="150" height="200" alt="book7"></td>
-                <td>3/17/22</td>
-                <td>Jane Eyre hardcover book</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook4.jpg" width="150" height="200" alt="notebook4"></td>
-                <td>3/22/22</td>
-                <td>Stuyvesant High School Planner</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook5.jpg" width="150" height="200" alt="notebook5"></td>
-                <td>3/22/22</td>
-                <td>Light blue spiral notebook, Arctic Star</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook6.jpg" width="150" height="200" alt="notebook6"></td>
-                <td>3/28/22</td>
-                <td>Black plastic folder</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook7.jpg" width="150" height="200" alt="notebook7"></td>
-                <td>3/31/22</td>
-                <td>Yellow spiral notebook, School Smart</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook8.jpg" width="150" height="200" alt="notebook8"></td>
-                <td>4/5/22</td>
-                <td>Orange college ruled spiral notebook</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook9.jpg" width="150" height="200" alt="notebook9"></td>
-                <td>4/5/22</td>
-                <td>Black croc leather notebook</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook10.jpg" width="150" height="200" alt="notebook10"></td>
-                <td>4/5/22</td>
-                <td>Red graph ruled composition notebook</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book8.jpg" width="150" height="200" alt="book8"></td>
-                <td>5/4/22</td>
-                <td>Spanish Descrubre 2 textbook, Vista Higher Learning</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook11.jpg" width="150" height="200" alt="notebook11"></td>
-                <td>5/11/22</td>
-                <td>Black plastic folder</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook12.jpg" width="150" height="200" alt="notebook12"></td>
-                <td>5/11/22</td>
-                <td>Black paper folder with words on front</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book9.jpg" width="150" height="200" alt="book9"></td>
-                <td>5/19/22</td>
-                <td>Pride and Prejudice hardcover book</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book10.jpg" width="150" height="200" alt="book10"></td>
-                <td>5/19/22</td>
-                <td>Revolutionary Road paperback book by Richard Yates</td>
-                <td>TBD</td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book11.jpg" width="150" height="200" alt="book11"></td>
-                <td>5/19/22</td>
-                <td>Dorian Gray paperback book by Oscar Wilde</td>
-                <td>TBD</td>
-            </tr>
-        </table>
-        </p>
-    </div>
-    <br><br><br>
-
-    <!-- Found Items -->
-    <h3 class="text-danger fw-light text-center">Found Items</h3>
-
-    <!-- Found Items Table -->
-    <div class=main>
-        <p>
-        <table style="width:100%;font-family:Trebuchet MS;">
-            <tr style="background-color:#f0f0f0">
-                <th>Image</th>
-                <th>Date Catalogued</th>
-                <th>Description</th>
-                <th>Object Store Page</th>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book1.jpg" width="150" height="200" alt="book1"></td>
-                <td>3/14/22</td>
-                <td>Gone Girl paperback book</td>
-                <td><a class="uHover" href="https://www.amazon.com/Gone-Girl-Gillian-Flynn/dp/0307588378">Gone Girl
-                        Paperback</a></td>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook3.jpg" width="150" height="200" alt="notebook3"></td>
-                <td>3/15/22</td>
-                <td>Night sky cover notebook, Archer & Olive</td>
-                <td><a class="uHover"
-                        href="https://www.washigang.com/products/archer-and-olive-a5-dot-grid-notebook-night-sky">A5 Dot
-                        Grid Notebook: Night Sky</a></td>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book2.jpg" width="150" height="200" alt="book2"></td>
-                <td>3/14/22</td>
-                <td>AP World History prep book, The Princeton Review</td>
-                <td><a class="uHover"
-                        href="https://www.amazon.com/Princeton-Review-World-History-Preparation/dp/0525570810">Princeton
-                        Review AP World History 2022</a></td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/notebook2a.jpg" width="150" height="200" alt="notebook2a"></td>
-                <td>3/14/22</td>
-                <td>Red spiral notebook, Oxford</td>
-                <td><a class="uHover"
-                        href="https://www.amazon.com/TOPS-1-Subject-Notebooks-Assortment-65007/dp/B00D3OR58A">Oxford
-                        Spiral Notebook</a></td>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="../static/permanentimages/book3.jpg" width="150" height="200" alt="book3"></td>
-                <td>5/3/22</td>
-                <td>Physics regents prep book, Prentice Hall</td>
-                <td><a class="uHover"
-                        href="https://www.amazon.com/Physics-Physical-Setting-Prentice-Regents/dp/013361199X">Physics,
-                        The Physical Setting: Prentice Hall Review for New York Regents</a></td>
-            </tr>
-
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
