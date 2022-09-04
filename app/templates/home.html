@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% from "navbar.html" import nav_bar with context %}
 <html>
 
 <head>
@@ -12,43 +13,7 @@
 
 <body>
 
- <!--Navigation Bar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><a class="nav-link text-light ms-5"
-            href="../home">Home</a></li>
-        <li class="nav-item active"><a class="nav-link text-light ms-5"
-            href="../outerwear"><i
-              class="fa-solid fa-shirt"></i>
-            Outerwear</a></li>
-        <li class="nav-item active"><a class="nav-link text-light ms-5"
-            href="../gloveshatsscarves"><i
-              class="fa-solid fa-mitten"></i> Gloves, Hats, and
-            Scarves</a></li>
-        <li class="nav-item active"><a class="nav-link text-light ms-5"
-            href="../personalschoolsupplies"><i
-              class="fa-solid fa-clipboard"></i> Personal School
-            Supplies</a></li>
-        <li class="nav-item active"><a class="nav-link text-light ms-5"
-            href="../bookspapers"><i
-              class="fa-solid fa-book"></i> Books, Textbooks,
-            and
-            Papers</a></li>
-        <li class="nav-item active"><a class="nav-link text-light ms-5"
-            href="../smallitems"><i
-              class="fa-solid fa-id-card"></i> Small Items (Room
-            209)</a>
-        </li>
-
-        </form>
-    </div>
-  </nav>
+  {{nav_bar()}}
 
   <!-- Epik Title -->
   <div class="container mb-3 mt-4 mb-4">
@@ -61,12 +26,15 @@
   <div class="container mt-3">
     <p>
       As stated in the title, this website is a catalogue covering all the items contained within the <a class="oLink"
-        href="../boxinfo"
-        style="text-decoration: none">various
-        lost and found boxes on the
-        second floor</a>. The catalogue will likely be updated at least once every school day, though this is
-      not guaranteed.
-      <br><br>We hope this website will prove useful in allowing one to quickly see whether an item they lost is in the
+      href="../boxinfo"
+      style="text-decoration: none">various
+      lost and found boxes on the
+      second floor</a>. The catalogue primarily relies
+	  on a <a class="oLink" href="../reportfounditem" style="text-decoration: none" font-weight="bold">crowd-sourced data reporting system</a>.
+	  <br>
+	  If you find a lost item therefore, we highly recommend you upload it manually with the system, which takes just a minute of your time.
+      <br><br>
+	  We hope this website will prove useful in allowing one to quickly see whether an item they lost is in the
       lost and found boxes, and in which box their lost item is located in.
     </p>
   </div>
@@ -92,79 +60,15 @@
           209)</button></a> (Metrocards, keychains, airpods, etc.)
     </p>
   </div>
+
   <br><br>
 
-  <!--New Lost Items-->
-  <h2 class="text-danger text-center">New Lost Items</h2>
-  <br>
-
-  <div id="carouselExampleCaptions" class="carousel slide bg-epic" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-        aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-        aria-label="Slide 5"></button>
-
-      <!-- Carousel -->
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../static/permanentimages/outerwear17.jpg" class="d-block top-50 start-50 translate-middle" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5><button
-            class="btn py-0 my-0 fs-4 text-white fw-normal text-shadow">Friends T-Shirt</button></a></h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../static/permanentimages/lunchbox3.jpg" class="d-block top-50 start-50 translate-middle" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5><button
-                class="btn py-0 my-0 fs-4 text-white fw-normal text-shadow">Black Lunchbox</button></h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../static/permanentimages/outerwear18a.jpg" class="d-block top-50 start-50 translate-middle" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5><button class="btn py-0 my-0 fs-4 text-white fw-normal text-shadow">Stuyvesant Black Hoodie</button></h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../static/permanentimages/outerwear19.jpg" class="d-block top-50 start-50 translate-middle" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5><button
-                class="btn py-0 my-0 fs-4 text-white fw-normal text-shadow">Stuyvesant Gym Jogging Pants</button></h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../static/permanentimages/notebook6.jpg" class="d-block top-50 start-50 translate-middle" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="btn py-0 my-0 fs-4 text-white fw-normal text-shadow">Black Plastic Folder</h5>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <br><br>
-
-  <h2 class="text-danger text-center fs-4">Contact Information</h2>
+  <h2 class="text-danger fs-4">Contact Information</h2>
   <div class="container mt-3">
     <p>
-      Email: stuylostandfound@gmail.com
-      <br>Alternatively: Either asevilla20@stuy.edu or tacuna20@stuy.edu
-      <br>Emails sent to stuylostandfound@gmail.com will likely be responded to within a day, while emails sent to
+      Email: it@stuysu.org
+      <br>Alternatively: cwong31@stuy.edu
+      <br>Emails sent to it@stuysu.org will likely be responded to within a day, while emails sent to
       alternative emails may take a longer time to be responded to.
     </p>
     <br>
