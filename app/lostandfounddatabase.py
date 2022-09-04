@@ -1,13 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
 import os
-from dotenv import load_dotenv
 import datetime
 import hashlib
 import cloudinary.uploader
 import string, random
-
-load_dotenv()
 
 def uploadImage(image, user):
     uniqueCode = ""

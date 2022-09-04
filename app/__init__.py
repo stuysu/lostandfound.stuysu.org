@@ -1,10 +1,41 @@
 from flask import Flask, render_template, request, redirect, url_for
 import base64
+from dotenv import load_dotenv
 #import io
 #import whatimage
 #import pyheif
 #from PIL import Image
+load_dotenv()
 from lostandfounddatabase import *
+
+def submit(code_req, request):
+    type = request.form.get("type")
+    date = request.form.get("date")
+    description = request.form.get("description")
+    if code_req:
+        user = request.form.get("user")
+        auth = request.form.get("auth")
+        authorized = isAuthorized(user, auth)
+        #print("Authorized:" + str(authorized))
+        if not authorized:
+            return redirect(url_for('unauthorized'))
+    else:
+        user = "public_upload"
+    images = [None, None]
+    image_names = ['image1', 'image2']
+    for index, image_name in enumerate(image_names):
+        if image_name in request.files:
+            image = request.files[image_name].read()
+            if not image:
+                images[index] = ""
+                continue
+            image_string = base64.b64encode(image)
+            image_to_upload = image_string.decode('utf-8')
+            images[index] = uploadImage("data:image/png;base64," + image_to_upload, user)
+
+    database_add(type, date, description, images[0], images[1])
+    return redirect(url_for('thanks'))
+
 app = Flask(__name__)
 
 @app.route("/", methods=["GET","POST"])
@@ -30,6 +61,18 @@ def hello():
         personalschool=database_display_all('personalschoolsupplies'),
         smallitems=database_display_all('smallitems'),
         full=database_display_full(),
+    )
+
+@app.route("/thanks", methods=["GET","POST"])
+def thanks():
+    return render_template(
+        "thanks.html",
+    )
+
+@app.route("/reportfounditem", methods=["GET","POST"])
+def reportitem():
+    return render_template(
+        "reportfounditem.html",
     )
 
 @app.route("/boxinfo", methods=["GET","POST"])
@@ -79,31 +122,13 @@ def unauthorized():
         "unauthorized.html",
     )
 
-@app.route("/submit", methods=["POST"])
-def submit():
-    type = request.form.get("type")
-    date = request.form.get("date")
-    description = request.form.get("description")
-    user = request.form.get("user")
-    auth = request.form.get("auth")
-    authorized = isAuthorized(user, auth)
-    #print("Authorized:" + str(authorized))
-    if not authorized:
-        return redirect(url_for('unauthorized'))
-    images = [None, None]
-    image_names = ['image1', 'image2']
-    for index, image_name in enumerate(image_names):
-        if image_name in request.files:
-            image = request.files[image_name].read()
-            if not image:
-                images[index] = ""
-                continue
-            image_string = base64.b64encode(image)
-            image_to_upload = image_string.decode('utf-8')
-            images[index] = uploadImage("data:image/png;base64," + image_to_upload, user)
+@app.route("/publicsubmit", methods=["POST"])
+def submit_wrapper_two():
+    return submit(False, request)
 
-    database_add(type, date, description, images[0], images[1])
-    return redirect(url_for('hello'))
+@app.route("/submit", methods=["POST"])
+def submit_wrapper():
+    return submit(True, request)
 
 @app.route("/confirm", methods=["GET","POST"])
 def delete():
